@@ -1,4 +1,4 @@
-package se.andolf.triangles;
+package se.andolf.entities;
 
 import org.lwjgl.util.vector.Vector3f;
 

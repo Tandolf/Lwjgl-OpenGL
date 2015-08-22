@@ -1,4 +1,4 @@
-package se.andolf.triangles;
+package se.andolf.entities;
 
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;

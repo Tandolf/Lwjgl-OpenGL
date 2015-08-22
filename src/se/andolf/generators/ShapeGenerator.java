@@ -1,12 +1,15 @@
-package se.andolf.triangles;
+package se.andolf.generators;
 
-import static se.andolf.triangles.Constants.RED_TRIANGLE_Z;
-import static se.andolf.triangles.Constants.SIZE_OF_SHORT;
-import static se.andolf.triangles.Util.createFloatBuffer;
+import static se.andolf.util.Constants.RED_TRIANGLE_Z;
+import static se.andolf.util.Constants.SIZE_OF_SHORT;
+import static se.andolf.util.Util.createFloatBuffer;
 
 import java.nio.ShortBuffer;
 
 import org.lwjgl.BufferUtils;
+
+import se.andolf.entities.ShapeData;
+import se.andolf.entities.Vertex;
 
 public class ShapeGenerator {
 	

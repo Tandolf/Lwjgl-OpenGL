@@ -1,4 +1,4 @@
-package se.andolf.triangles;
+package se.andolf.util;
 
 public final class Constants {
 	

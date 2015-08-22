@@ -1,4 +1,4 @@
-package se.andolf.triangles;
+package se.andolf.main;
 
 import static org.lwjgl.opengl.GL11.GL_COLOR_BUFFER_BIT;
 import static org.lwjgl.opengl.GL11.GL_VERSION;
@@ -14,6 +14,8 @@ import org.lwjgl.opengl.ContextAttribs;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.opengl.PixelFormat;
+
+import se.andolf.entities.Camera;
 
 public class Main {
 

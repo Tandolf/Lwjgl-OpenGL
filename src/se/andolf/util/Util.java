@@ -1,4 +1,4 @@
-package se.andolf.triangles;
+package se.andolf.util;
 
 import static org.lwjgl.opengl.GL11.GL_FALSE;
 import static org.lwjgl.opengl.GL20.GL_COMPILE_STATUS;
@@ -8,13 +8,15 @@ import static org.lwjgl.opengl.GL20.glGetProgramInfoLog;
 import static org.lwjgl.opengl.GL20.glGetProgrami;
 import static org.lwjgl.opengl.GL20.glGetShaderInfoLog;
 import static org.lwjgl.opengl.GL20.glGetShaderi;
-import static se.andolf.triangles.Constants.ELEMENTS_OF_VERTEX3;
-import static se.andolf.triangles.Constants.SIZE_OF_FLOAT;
+import static se.andolf.util.Constants.ELEMENTS_OF_VERTEX3;
+import static se.andolf.util.Constants.SIZE_OF_FLOAT;
 
 import java.nio.FloatBuffer;
 
 import org.lwjgl.BufferUtils;
 import org.lwjgl.util.vector.Matrix4f;
+
+import se.andolf.entities.Vertex;
 
 import com.hackoeur.jglm.Mat4;
 import com.hackoeur.jglm.Vec4;

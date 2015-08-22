@@ -1,4 +1,4 @@
-package se.andolf.triangles;
+package se.andolf.main;
 
 import static org.lwjgl.opengl.GL11.GL_DEPTH_BUFFER_BIT;
 import static org.lwjgl.opengl.GL11.GL_DEPTH_TEST;
@@ -33,11 +33,11 @@ import static org.lwjgl.opengl.GL20.glVertexAttribPointer;
 import static org.lwjgl.opengl.GL30.glBindVertexArray;
 import static org.lwjgl.opengl.GL30.glGenVertexArrays;
 import static org.lwjgl.util.glu.GLU.gluErrorString;
-import static se.andolf.triangles.Constants.SIZE_OF_FLOAT;
-import static se.andolf.triangles.Util.checkProgramStatus;
-import static se.andolf.triangles.Util.checkShaderStatus;
-import static se.andolf.triangles.Util.createMatrixBuffer;
-import static se.andolf.triangles.Util.createProjectionMatrix;
+import static se.andolf.util.Constants.SIZE_OF_FLOAT;
+import static se.andolf.util.Util.checkProgramStatus;
+import static se.andolf.util.Util.checkShaderStatus;
+import static se.andolf.util.Util.createMatrixBuffer;
+import static se.andolf.util.Util.createProjectionMatrix;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -46,6 +46,11 @@ import java.io.IOException;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector3f;
+
+import se.andolf.entities.Camera;
+import se.andolf.entities.ShapeData;
+import se.andolf.generators.ShapeGenerator;
+import se.andolf.util.Util;
 
 public class OpenGL {
 	
@@ -96,7 +101,7 @@ public class OpenGL {
 		StringBuilder fragmentShaderSource = new StringBuilder();
 				
 		try {
-			BufferedReader reader = new BufferedReader(new FileReader("src/se/andolf/triangles/shader.vert"));
+			BufferedReader reader = new BufferedReader(new FileReader("src/se/andolf/main/shader.vert"));
 			String line = null;
 			while((line = reader.readLine()) != null){
 				vertexShaderSource.append(line).append("\n");
@@ -108,7 +113,7 @@ public class OpenGL {
 		}
 		
 		try {
-			BufferedReader reader = new BufferedReader(new FileReader("src/se/andolf/triangles/shader.frag"));
+			BufferedReader reader = new BufferedReader(new FileReader("src/se/andolf/main/shader.frag"));
 			String line = null;
 			while((line = reader.readLine()) != null){
 				fragmentShaderSource.append(line).append("\n");
